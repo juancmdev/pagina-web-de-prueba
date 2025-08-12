@@ -1,6 +1,9 @@
 import React from "react";
+import Header from "../components/Layout/Header";
 
 const Home = () => (
+    <>
+    <Header/>
     <main style={{ padding: "2rem" }}>
         <h1>Bienvenido a Nuestra Tienda Deportiva</h1>
         <p>
@@ -16,6 +19,7 @@ const Home = () => (
             ¡Explora nuestro catálogo y encuentra todo lo que necesitas para mantenerte activo y saludable!
         </p>
     </main>
+    </>
 );
 
 export default Home;
