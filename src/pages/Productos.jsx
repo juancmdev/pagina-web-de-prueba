@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ProductCard from "../components/Layout/ProductCard";
 
 
   
@@ -14,8 +15,10 @@ useEffect(() => {
 
   return (
     <>
-      <h1 className="text-4xl">Productos</h1>
-      {productos.map(producto => <h2 key={producto.id} className="text-2xl">{producto.nombre}</h2>)}
+      <h1 className="text-4xl font-bold mb-8">Nuestros Productos</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"> {/* Añadimos un grid para el layout */}
+        {productos.map(producto => <ProductCard key={producto.id} producto = {producto}/>)}
+      </div>
     </>
   )
 }
