@@ -3,7 +3,6 @@ import Header from "../components/Layout/Header";
 
 const Home = () => (
     <>
-    <Header/>
     <main style={{ padding: "2rem" }}>
         <h1>Bienvenido a Nuestra Tienda Deportiva</h1>
         <p>
