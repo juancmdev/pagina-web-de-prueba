@@ -30,9 +30,9 @@ const Header = () => {
                     <LogoDX />
                 </div>
                 <div style={{ display: 'flex', gap: '2rem' }}>
-                    <a href="/" style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}>Home</a>
-                    <a href="/productos" style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}>Productos</a>
-                    <a href="/contacto" style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}>Contacto</a>
+                    <Link to="/" style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}>Home</Link>
+                    <Link to="/productos" style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}>Productos</Link>
+                    <Link to="/contacto" style={{ color: '#fff', textDecoration: 'none', fontWeight: 'bold' }}>Contacto</Link>
                 </div>
                 <div>
                     <CartIcon />
