@@ -1,14 +1,15 @@
-import Footer from "./components/Layout/Footer";
-import Header from "./components/Layout/Header";
-import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
+import MainLayout from "./components/Layout/MainLayout";
+
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Home />
-      <Footer />
+      <MainLayout>
+        <Routes/>
+        <Route/>
+      </MainLayout>
     </>
   )
 }
