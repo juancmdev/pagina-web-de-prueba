@@ -18,7 +18,7 @@ const productos = [
     nombre: 'Botella de Agua Deportiva',
     precio: 12.00,
     descripcion: 'Botella de 750ml, libre de BPA, con tapa a prueba de fugas, ideal para cualquier actividad.',
-    imagenUrl: 'https://cdn.pixabay.com/photo/2016/11/22/19/25/water-bottle-1850720_1280.jpg'
+    imagenUrl: 'https://m.media-amazon.com/images/I/61azLiwwlcL._AC_SL1500_.jpg'
   }
 ];
 
