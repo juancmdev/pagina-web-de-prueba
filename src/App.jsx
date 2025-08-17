@@ -3,6 +3,7 @@ import MainLayout from "./components/Layout/MainLayout";
 import Home from "./pages/Home";
 import Productos from "./pages/Productos";
 import ProductDetails from "./pages/ProductDetails";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
           <Route path="/productos" element={<Productos />} />
           {/* Aquí puedes agregar más rutas según sea necesario */}
           <Route path="/productos/:id" element={<ProductDetails />} />{" "}
-          {/* Detalles del producto */}
+          <Route path="/contacto" element={<div>Contacto</div>} />
+          <Route path="/carrito" element={<Cart />} />
         </Routes>
       </MainLayout>
     </>
