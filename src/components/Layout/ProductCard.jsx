@@ -8,7 +8,7 @@ export default function ProductCard({ producto }) {
       <img
         src={producto.imagenUrl}
         alt={producto.imagenUrl}
-        className="w-[48] h-[48] mb-4 mx-auto mt-2"
+        className="w-[178px] h-[178px] object-contain mb-4 mx-auto mt-2"
       />
       {/*Precio del Producto*/}
       <h2 className="text-3xl text-center">${producto.precio}</h2>

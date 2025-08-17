@@ -44,21 +44,27 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-6 flex flex-col items-center justify-center">
       {isLoading && <p>Cargando producto...</p>}
 
       {error && <p className="text-red-500">Error: {error}</p>}
 
       {producto && !isLoading && !error && (
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold mb-2">{producto.nombre}</h2>
-          <img src={producto.imagenUrl} alt={producto.nombre} />
-          <p className="text-gray-700 mb-4">{producto.descripcion}</p>
-          <p className="text-lg font-bold text-green-600">${producto.precio}</p>
+        <div className=" p-6 rounded-lg shadow-md w-[700px] mx-auto flex flex-col items-center">
+          <h2 className="text-3xl font-semibold mb-6">{producto.nombre}</h2>
+          <img
+            src={producto.imagenUrl}
+            alt={producto.nombre}
+            className="w-[200px] mb-6"
+          />
+          <p className="text-gray-700 mb-6">{producto.descripcion}</p>
+          <p className="text-2xl font-bold text-green-700">
+            Precio: ${producto.precio}
+          </p>
         </div>
       )}
       <button
-        className="p-2 bg-black text-white m-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer d-block mx-auto"
+        className="p-2 bg-black text-white mt-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer"
         onClick={() => agregarAlCarrito(producto)}
       >
         Añadir al carrito
