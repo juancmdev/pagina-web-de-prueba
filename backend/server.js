@@ -17,7 +17,12 @@ app.get("/apiProductos/:id", (req, res) => {
   const producto = productos.find(
     (producto) => producto.id === parseInt(req.params.id)
   );
-  res.json(producto);
+  if (producto) {
+    res.json(producto);
+  } else {
+    // Si el producto no se encuentra, enviamos un estado 404
+    res.status(404).json({ error: "Producto no encontrado" });
+  }
 });
 
 //Escuchar el servidor
