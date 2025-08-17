@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ProductCard from "../components/Layout/ProductCard";
+import { Link } from "react-router-dom";
 
 export default function Productos() {
   const [productos, setProductos] = useState([]);
@@ -18,7 +19,9 @@ export default function Productos() {
         {" "}
         {/* Añadimos un grid para el layout */}
         {productos.map((producto) => (
-          <ProductCard key={producto.id} producto={producto} />
+          <Link key={producto.id} to={`/productos/${producto.id}`}>
+            <ProductCard producto={producto} />
+          </Link>
         ))}
       </div>
     </>

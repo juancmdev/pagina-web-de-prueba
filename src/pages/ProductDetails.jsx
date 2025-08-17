@@ -10,7 +10,7 @@ const ProductDetails = () => {
     fetch(`http://localhost:3001/apiProductos/${id}`)
       .then((response) => response.json())
       .then((data) => setProducto(data));
-  }, []);
+  }, [id]);
 
   return (
     <div className="container mx-auto p-4">
