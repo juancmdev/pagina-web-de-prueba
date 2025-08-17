@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
+
+import { CartContext } from "../context/CartContext.jsx";
 
 const ProductDetails = () => {
   const { id } = useParams(); // Aquí puedes usar el id para obtener los detalles del producto desde una API o estado global
   const [producto, setProducto] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const { carrito } = useContext(CartContext); // Accedemos al carrito desde el contexto
 
   useEffect(() => {
     // Definimos la función de fetch dentro del efecto
