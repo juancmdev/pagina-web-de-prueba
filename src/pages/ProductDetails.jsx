@@ -36,6 +36,12 @@ const ProductDetails = () => {
     fetchProduct();
   }, [id]);
 
+  const agregarAlCarrito = (producto) => {
+    const nuevoCarrito = [...carrito, producto];
+    // Aquí podrías actualizar el estado del carrito en el contexto
+    setCarrito(nuevoCarrito);
+  };
+
   return (
     <div className="container mx-auto p-4">
       {isLoading && <p>Cargando producto...</p>}
