@@ -9,7 +9,7 @@ const ProductDetails = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { carrito } = useContext(CartContext); // Accedemos al carrito desde el contexto
+  const { carrito, setCarrito } = useContext(CartContext); // Accedemos al carrito desde el contexto
 
   useEffect(() => {
     // Definimos la función de fetch dentro del efecto
@@ -40,6 +40,7 @@ const ProductDetails = () => {
     const nuevoCarrito = [...carrito, producto];
     // Aquí podrías actualizar el estado del carrito en el contexto
     setCarrito(nuevoCarrito);
+    console.log("Producto añadido al carrito:", producto);
   };
 
   return (
@@ -56,6 +57,12 @@ const ProductDetails = () => {
           <p className="text-lg font-bold text-green-600">${producto.precio}</p>
         </div>
       )}
+      <button
+        className="p-2 bg-black text-white m-3 rounded-lg hover:bg-gray-800 transition-colors cursor-pointer d-block mx-auto"
+        onClick={() => agregarAlCarrito(producto)}
+      >
+        Añadir al carrito
+      </button>
     </div>
   );
 };

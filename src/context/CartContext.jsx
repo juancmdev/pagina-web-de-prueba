@@ -8,6 +8,8 @@ export const CartProvider = ({ children }) => {
 
   // Retornamos el CartContext.Provider
   return (
-    <CartContext.Provider value={{ carrito }}>{children}</CartContext.Provider>
+    <CartContext.Provider value={{ carrito, setCarrito }}>
+      {children}
+    </CartContext.Provider>
   );
 };
