@@ -64,67 +64,29 @@ const Header = () => {
         <div style={{ display: "flex", gap: "2rem" }}>
           <Link
             to="/"
-            style={{
-              color: "#fff",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
+            className="text-white font-bold flex justify-center items-center relative"
           >
             Home
           </Link>
           <Link
             to="/productos"
-            style={{
-              color: "#fff",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
+            className="text-white font-bold flex justify-center items-center relative"
           >
             Productos
           </Link>
           <Link
             to="/contacto"
-            style={{
-              color: "#fff",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
+            className="text-white font-bold flex justify-center items-center relative"
           >
             Contacto
           </Link>
         </div>
         <div>
-          <Link
-            to={"/carrito"}
-            style={{
-              color: "#fff",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
-          >
+          <Link to={"/carrito"} className="text-white no-underline font-bold">
             <div className="flex justify-center items-center relative">
               <CartIcon />
               {carrito.length > 0 && (
-                <span
-                  style={{
-                    background: "#ff0000",
-                    color: "#fff",
-                    borderRadius: "50%",
-                    height: "20px",
-                    width: "20px",
-                    display: "inline-block",
-                    textAlign: "center",
-                    marginLeft: "0.5rem",
-                    position: "absolute",
-                    fontSize: "12px",
-                    fontWeight: "bold",
-                    top: "-10px",
-                    right: "-25px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
+                <span className="bg-red-500 text-white rounded-full h-5 w-5 inline-flex justify-center items-center ml-2 absolute -top-2.5 -right-6 text-[12px] font-bold">
                   {carrito.length}
                 </span>
               )}
