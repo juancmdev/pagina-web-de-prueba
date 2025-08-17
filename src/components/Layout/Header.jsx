@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext.jsx";
 
 const LogoDX = () => (
   <svg
@@ -42,6 +44,8 @@ const CartIcon = () => (
 );
 
 const Header = () => {
+  const { carrito } = useContext(CartContext); // Accedemos al carrito desde el contexto
+
   return (
     <header style={{ background: "#222", padding: "1rem 0" }}>
       <nav
@@ -98,7 +102,33 @@ const Header = () => {
               fontWeight: "bold",
             }}
           >
-            <CartIcon />
+            <div className="flex justify-center items-center relative">
+              <CartIcon />
+              {carrito.length > 0 && (
+                <span
+                  style={{
+                    background: "#ff0000",
+                    color: "#fff",
+                    borderRadius: "50%",
+                    height: "20px",
+                    width: "20px",
+                    display: "inline-block",
+                    textAlign: "center",
+                    marginLeft: "0.5rem",
+                    position: "absolute",
+                    fontSize: "12px",
+                    fontWeight: "bold",
+                    top: "-10px",
+                    right: "-25px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  {carrito.length}
+                </span>
+              )}
+            </div>
           </Link>
         </div>
       </nav>
