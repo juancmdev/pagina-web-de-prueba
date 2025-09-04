@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext.jsx";
 
 export default function Cart() {
-  const { carrito } = useContext(CartContext); // Accedemos al carrito desde el contexto
+  const { carrito, eliminarDelCarrito } = useContext(CartContext); // Accedemos al carrito desde el contexto
   return (
     <>
       <h1 className="text-3xl m-7 max-w-2xl mx-auto">
@@ -15,7 +15,9 @@ export default function Cart() {
             className="p-4 bg-white shadow-md rounded-lg mb-4"
           >
             {producto.nombre} - ${producto.precio}
-            <button className="ml-6 w-7 h-7 bg-red-600 text-white rounded-full font-bold hover:bg-red-700 transition-colors align-middle">
+            <button className="ml-6 w-7 h-7 bg-red-600 text-white rounded-full font-bold hover:bg-red-700 transition-colors align-middle"
+              onClick={() => eliminarDelCarri(producto.id)}
+            >
               X
             </button>
           </li>
