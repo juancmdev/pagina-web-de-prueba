@@ -15,7 +15,7 @@ export default function Productos() {
       <h1 className="text-4xl font-bold mb-8 mt-5 text-center">
         Nuestros Productos
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mr-10 ml-10">
         {" "}
         {/* Añadimos un grid para el layout */}
         {productos.map((producto) => (
